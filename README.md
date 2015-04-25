@@ -1,8 +1,8 @@
-# LiveOak Docker image
+# LiveOak Docker image (Beta and Unofficial)
 
 This is a set of Docker images related to LiveOak. 
 
-- Server
+- Server (admin and keystore for https)
 - Examples (TBD) 
 
 
