@@ -6,7 +6,9 @@ ENV JAVA_HOME /usr/lib/jvm/java-1.8.0
 RUN curl -L http://repository.liveoak.io/io/liveoak/liveoak-dist/$LIVEOAK_VERSION/liveoak-dist-$LIVEOAK_VERSION.tar.gz | tar zx
 
 # Expose the ports we're interested in
-EXPOSE 8080 9990
+EXPOSE 8080 8443 9990
+
+RUN /opt/jboss/liveoak/bin/add-user.sh admin Admin#70365 --silent
 
 # Set the default command to run on boot
 # This will boot WildFly in the standalone mode and bind to all interface
